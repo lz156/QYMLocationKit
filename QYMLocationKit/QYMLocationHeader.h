@@ -10,6 +10,7 @@
 
 #import "QYMErrorCodeConfig.h"
 #import "QYMLocationAuthority.h"
+#import "QYMLocationModel.h"
 #import "QYMLocationManager.h"
 #import "QYMModelCacheManager.h"
 #import "QYMReverseGeocodeManager.h"

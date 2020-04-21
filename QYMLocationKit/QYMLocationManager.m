@@ -69,8 +69,9 @@
           return;
        }
        
-       //开始定位
-       self.isLoading = YES;
+    //开始定位
+    self.isLoading = YES;
+    self.resultBlock = resultBlock;
     //定位处理
     self.locationManager = manager;
     self.locationManager.delegate = self;

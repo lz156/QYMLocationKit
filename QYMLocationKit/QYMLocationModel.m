@@ -79,18 +79,18 @@
     if (self.subThoroughfare.length > 0) {
         [detailAddr appendString:self.subThoroughfare];
     }
-    return detailAddr;
+    return [detailAddr copy];
 }
 
 - (NSString *)formatAddr{
     
     NSMutableString *formatStr = [NSMutableString string];
-    [formatStr appendFormat:[NSString stringWithFormat:@"%@&",self.administrativeArea?:@""]];
-    [formatStr appendFormat:[NSString stringWithFormat:@"%@&",self.locality?:self.subLocality?:@""]];
-    [formatStr appendFormat:[NSString stringWithFormat:@"%@&",self.subLocality?:@""]];
-    [formatStr appendFormat:[NSString stringWithFormat:@"%@%@",self.thoroughfare?:@"",self.subThoroughfare?:@""]];
+    [formatStr appendFormat:@"%@&",self.administrativeArea?:@""];
+    [formatStr appendFormat:@"%@&",self.locality?:self.subLocality?:@""];
+    [formatStr appendFormat:@"%@&",self.subLocality?:@""];
+    [formatStr appendFormat:@"%@%@",self.thoroughfare?:@"",self.subThoroughfare?:@""];
     
-    return formatStr;
+    return [formatStr copy];
 }
 
 

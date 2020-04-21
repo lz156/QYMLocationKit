@@ -15,6 +15,9 @@
 		045D648D24499963002910C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045D648C24499963002910C7 /* main.m */; };
 		045D649724499963002910C7 /* QYMLocationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045D649624499963002910C7 /* QYMLocationDemoTests.m */; };
 		045D64A224499963002910C7 /* QYMLocationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045D64A124499963002910C7 /* QYMLocationDemoUITests.m */; };
+		37E3E69A126CD3F13997E0D5 /* Pods_QYMLocationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8954BD17B86BC532E64457 /* Pods_QYMLocationDemo.framework */; };
+		9886716E156234639E993100 /* Pods_QYMLocationDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDB5684269AB9F38DF122E0 /* Pods_QYMLocationDemoTests.framework */; };
+		C52139BE26073E7858D9CCA8 /* Pods_QYMLocationDemo_QYMLocationDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD1AFDDF9880C33031D5D78 /* Pods_QYMLocationDemo_QYMLocationDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0110D5161185FC843CAD6A66 /* Pods-QYMLocationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemo.debug.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemo/Pods-QYMLocationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		045D647724499962002910C7 /* QYMLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYMLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045D647A24499962002910C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		045D647B24499962002910C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 		045D649D24499963002910C7 /* QYMLocationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYMLocationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045D64A124499963002910C7 /* QYMLocationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYMLocationDemoUITests.m; sourceTree = "<group>"; };
 		045D64A324499963002910C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594EE82E68F0B85A34A34D38 /* Pods-QYMLocationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemo.release.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemo/Pods-QYMLocationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8C8954BD17B86BC532E64457 /* Pods_QYMLocationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYMLocationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE0240B9770C3F8B3574C46 /* Pods-QYMLocationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemoTests.release.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemoTests/Pods-QYMLocationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		9DD1AFDDF9880C33031D5D78 /* Pods_QYMLocationDemo_QYMLocationDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYMLocationDemo_QYMLocationDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8F4AE2E99035AB7F06D87A /* Pods-QYMLocationDemo-QYMLocationDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemo-QYMLocationDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemo-QYMLocationDemoUITests/Pods-QYMLocationDemo-QYMLocationDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A564233E95456563C89D6D41 /* Pods-QYMLocationDemo-QYMLocationDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemo-QYMLocationDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemo-QYMLocationDemoUITests/Pods-QYMLocationDemo-QYMLocationDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC93634763C0AD1574DD1743 /* Pods-QYMLocationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYMLocationDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-QYMLocationDemoTests/Pods-QYMLocationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDDB5684269AB9F38DF122E0 /* Pods_QYMLocationDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYMLocationDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E3E69A126CD3F13997E0D5 /* Pods_QYMLocationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9886716E156234639E993100 /* Pods_QYMLocationDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52139BE26073E7858D9CCA8 /* Pods_QYMLocationDemo_QYMLocationDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				045D649524499963002910C7 /* QYMLocationDemoTests */,
 				045D64A024499963002910C7 /* QYMLocationDemoUITests */,
 				045D647824499962002910C7 /* Products */,
+				B29635A46930E3374D648ACF /* Pods */,
+				AFB40A16F100CF490D7374B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,30 @@
 			path = QYMLocationDemoUITests;
 			sourceTree = "<group>";
 		};
+		AFB40A16F100CF490D7374B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C8954BD17B86BC532E64457 /* Pods_QYMLocationDemo.framework */,
+				9DD1AFDDF9880C33031D5D78 /* Pods_QYMLocationDemo_QYMLocationDemoUITests.framework */,
+				CDDB5684269AB9F38DF122E0 /* Pods_QYMLocationDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29635A46930E3374D648ACF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0110D5161185FC843CAD6A66 /* Pods-QYMLocationDemo.debug.xcconfig */,
+				594EE82E68F0B85A34A34D38 /* Pods-QYMLocationDemo.release.xcconfig */,
+				A564233E95456563C89D6D41 /* Pods-QYMLocationDemo-QYMLocationDemoUITests.debug.xcconfig */,
+				9F8F4AE2E99035AB7F06D87A /* Pods-QYMLocationDemo-QYMLocationDemoUITests.release.xcconfig */,
+				AC93634763C0AD1574DD1743 /* Pods-QYMLocationDemoTests.debug.xcconfig */,
+				9AE0240B9770C3F8B3574C46 /* Pods-QYMLocationDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045D64A624499963002910C7 /* Build configuration list for PBXNativeTarget "QYMLocationDemo" */;
 			buildPhases = (
+				8D3B5F05BBAE2A21C981B41F /* [CP] Check Pods Manifest.lock */,
 				045D647324499962002910C7 /* Sources */,
 				045D647424499962002910C7 /* Frameworks */,
 				045D647524499962002910C7 /* Resources */,
+				627FE469B3BE956E9932AB43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045D64A924499963002910C7 /* Build configuration list for PBXNativeTarget "QYMLocationDemoTests" */;
 			buildPhases = (
+				336E16517B4CA3D64186FA00 /* [CP] Check Pods Manifest.lock */,
 				045D648E24499963002910C7 /* Sources */,
 				045D648F24499963002910C7 /* Frameworks */,
 				045D649024499963002910C7 /* Resources */,
@@ -174,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045D64AC24499963002910C7 /* Build configuration list for PBXNativeTarget "QYMLocationDemoUITests" */;
 			buildPhases = (
+				0E0BD16EBF784F5A106DA652 /* [CP] Check Pods Manifest.lock */,
 				045D649924499963002910C7 /* Sources */,
 				045D649A24499963002910C7 /* Frameworks */,
 				045D649B24499963002910C7 /* Resources */,
+				308D6725DC8BE56EFACBECC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +302,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E0BD16EBF784F5A106DA652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QYMLocationDemo-QYMLocationDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		308D6725DC8BE56EFACBECC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo-QYMLocationDemoUITests/Pods-QYMLocationDemo-QYMLocationDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo-QYMLocationDemoUITests/Pods-QYMLocationDemo-QYMLocationDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo-QYMLocationDemoUITests/Pods-QYMLocationDemo-QYMLocationDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		336E16517B4CA3D64186FA00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QYMLocationDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		627FE469B3BE956E9932AB43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo/Pods-QYMLocationDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo/Pods-QYMLocationDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QYMLocationDemo/Pods-QYMLocationDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D3B5F05BBAE2A21C981B41F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QYMLocationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		045D647324499962002910C7 /* Sources */ = {
@@ -431,6 +580,7 @@
 		};
 		045D64A724499963002910C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0110D5161185FC843CAD6A66 /* Pods-QYMLocationDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +598,7 @@
 		};
 		045D64A824499963002910C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 594EE82E68F0B85A34A34D38 /* Pods-QYMLocationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +616,7 @@
 		};
 		045D64AA24499963002910C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC93634763C0AD1574DD1743 /* Pods-QYMLocationDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +637,7 @@
 		};
 		045D64AB24499963002910C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AE0240B9770C3F8B3574C46 /* Pods-QYMLocationDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +658,7 @@
 		};
 		045D64AD24499963002910C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A564233E95456563C89D6D41 /* Pods-QYMLocationDemo-QYMLocationDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6HL4ANVNK;
@@ -523,6 +677,7 @@
 		};
 		045D64AE24499963002910C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8F4AE2E99035AB7F06D87A /* Pods-QYMLocationDemo-QYMLocationDemoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y6HL4ANVNK;

@@ -1,1 +1,4 @@
 .DS_Store
+/QYMLocationDemo/QYMLocationDemo.xcworkspace
+/QYMLocationDemo/Pods
+/QYMLocationDemo/Podfile.lock

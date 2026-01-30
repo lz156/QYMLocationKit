@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class CLLocation;
 
 typedef void (^LocationResultBlock)(BOOL success,
-                                    NSArray * _Nullable locations,
+                                    NSArray <CLLocation *>* _Nullable locations,
                                     NSError * _Nullable error);
 
 @interface QYMLocationManager : NSObject

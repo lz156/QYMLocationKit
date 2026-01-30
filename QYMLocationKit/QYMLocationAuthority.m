@@ -6,16 +6,41 @@
 //
 
 #import "QYMLocationAuthority.h"
+#import "QYMLocationManager.h"
+
+@interface  QYMLocationAuthority()
+///定位
+@property (nonatomic, strong) CLLocationManager *locManager;
+
+@end
+
 
 @implementation QYMLocationAuthority
 
++ (instancetype)share{
+    
+    static QYMLocationAuthority *authority = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        authority = [[QYMLocationAuthority alloc] init];
+    });
+    return authority;
+}
+
+#pragma mark -
 + (BOOL)locationServicesEnabled{
     return [CLLocationManager locationServicesEnabled];
 }
 
 + (CLAuthorizationStatus)locationAuthorizationStatus{
-    
-    return [CLLocationManager authorizationStatus];
+
+    if(@available(iOS 14.0, *)){
+        [QYMLocationAuthority share].locManager = [[CLLocationManager alloc] init];
+        return  [QYMLocationAuthority share].locManager.authorizationStatus;
+    }
+    else{
+        return [CLLocationManager authorizationStatus];
+    }
 }
 
 + (BOOL)checkLocAuthorization{
@@ -33,7 +58,7 @@
 }
 
 
-+ (BOOL)checkLocAuthorizationAndShowAlert{
++ (BOOL)checkLocAuthorizationAndShowAlertWithVC:(UIViewController *)inVC{
     
     if ([self checkLocAuthorization]) {
         return YES;
@@ -41,7 +66,8 @@
     else{
         if (![self locationServicesEnabled]) {
             [self showAlertWithTitle:@"打开定位开关"
-                             message:@"请在系统设置中开启定位服务(设置>隐私>定位服务>开启)"];
+                             message:@"请在系统设置中开启定位服务(设置>隐私>定位服务>开启)"
+                                inVC:inVC];
         }
         else if([self locationAuthorizationStatus] == kCLAuthorizationStatusNotDetermined){
             
@@ -49,7 +75,7 @@
         else{
             NSString *appName = [self appBundleDisplayName];
             NSString *msg = [NSString stringWithFormat:@"请在系统设置中开启定位服务(设置>隐私>定位服务>%@>使用应用期间)",appName];
-            [self showAlertWithTitle:@"打开定位服务权限" message:msg];
+            [self showAlertWithTitle:@"打开定位服务权限" message:msg inVC:inVC];
         }
     }
     
@@ -62,7 +88,7 @@
 }
 
 #pragma mark -
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message{
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message inVC:(UIViewController *)inVC{
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
                                                                              message:message
@@ -73,12 +99,7 @@
         [self openAppSettings];
     }]];
     
-    UIViewController *vc = nil;
-    NSArray *windows = [UIApplication sharedApplication].windows;
-    if ([windows count] > 0) {
-        UIWindow *window = windows[0];
-        vc = window.rootViewController;
-    }
+    UIViewController *vc = inVC;
     [vc presentViewController:alertController animated:YES completion:nil];
 }
 

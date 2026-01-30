@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 判断用户授权状态，YES：已授权，NO：用户拒绝授权或未开始授权
 + (BOOL)checkLocAuthorization;
+
+
+/// 检查权限，无权限提示alert弹框
+/// - Parameter inVC: 弹框显示的控制器
++ (BOOL)checkLocAuthorizationAndShowAlertWithVC:(UIViewController *)inVC;
 
 @end
 

@@ -27,7 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 本地读取model
 /// @param path 文件路径， 传空时，默认qymloc文件
-+ (id)readeLocationModelFromLocalWithPath:(NSString * _Nullable)path;
+/// @param classSet 类
++ (id)readeLocationModelFromLocalWithPath:(NSString *)path classes:(NSSet <Class>*) classSet;
 
 /// 删除model
 /// @param path 文件路径， 传空时，默认qymloc文件

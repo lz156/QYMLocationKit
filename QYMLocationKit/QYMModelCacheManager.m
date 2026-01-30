@@ -19,9 +19,15 @@
             
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSString *filePath = path.length > 0 ? path : [self locationModelPath];
-            BOOL success = [NSKeyedArchiver archiveRootObject:model toFile:filePath];
-            if (!success) {
-                NSLog(@"loc失败");
+            //BOOL success = [NSKeyedArchiver archiveRootObject:model toFile:filePath];
+            NSError *error = nil;
+            BOOL archiverResult = NO;
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model requiringSecureCoding:YES error:&error];
+            if(data){
+                archiverResult = [data writeToFile:filePath atomically:NO];
+            }
+            if (!archiverResult) {
+                NSLog(@"loc失败:%@",error.localizedDescription);
             }
             else{
                 //设置文件不同步
@@ -30,7 +36,7 @@
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (resultBlock) {
-                    resultBlock(success);
+                    resultBlock(archiverResult);
                 }
             });
         });
@@ -42,12 +48,21 @@
     }
 }
 #pragma mark - 从本地读取Model
-+ (id)readeLocationModelFromLocalWithPath:(NSString *)path{
++ (id)readeLocationModelFromLocalWithPath:(NSString *)path classes:(NSSet <Class>*) classSet{
     
     NSString *filePath = path.length > 0 ? path : [self locationModelPath];
     NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
+    
+    
+    
     if (data) {
-        id cacheModel = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        //id cacheModel = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        //NSSet *classSet = [[NSSet alloc] initWithObjects:[User class],[JLUserInfoModel class], [NSArray class],[NSString class],[NSDictionary class],[NSNumber class], nil];
+        NSError *error = nil;
+        id cacheModel = [NSKeyedUnarchiver unarchivedObjectOfClasses:classSet fromData:data error:&error];
+        if(error){
+            NSLog(@"解压失败:%@",error.localizedDescription);
+        }
         return cacheModel;
     }
     return nil;

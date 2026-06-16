@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QYMLocationModel : NSObject
+@interface QYMLocationModel : NSObject <NSSecureCoding>
 
 /** 经度 */
 @property (nonatomic, assign) double longitude;

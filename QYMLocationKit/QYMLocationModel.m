@@ -10,39 +10,41 @@
 
 @implementation QYMLocationModel
 
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super init]) {
-        
-        unsigned int count = 0;
-        objc_property_t *properties  = class_copyPropertyList([self class], &count);
-        for (int i = 0; i < count; i++) {
-            
-            const char *name = property_getName(properties[i]);
-            NSString *key    = [NSString stringWithUTF8String:name];
-            
-            if (key) {
-                id object = [aDecoder decodeObjectForKey:key];
-                [self setValue:object forKey:key];
-            }
-        }
+        self.longitude             = [aDecoder decodeDoubleForKey:@"longitude"];
+        self.latitude              = [aDecoder decodeDoubleForKey:@"latitude"];
+        self.country               = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"country"];
+        self.administrativeArea     = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"administrativeArea"];
+        self.subAdministrativeArea  = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"subAdministrativeArea"];
+        self.locality               = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"locality"];
+        self.subLocality            = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"subLocality"];
+        self.thoroughfare           = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"thoroughfare"];
+        self.subThoroughfare        = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"subThoroughfare"];
+        self.areaCode               = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"areaCode"];
+        self.cityCode               = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"cityCode"];
+        self.date                   = [aDecoder decodeObjectOfClass:[NSDate class] forKey:@"date"];
     }
     return  self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
-    
-    unsigned int count = 0;
-    objc_property_t *properties  = class_copyPropertyList([self class], &count);
-    for (int i = 0; i < count; i++) {
-        
-        const char *name = property_getName(properties[i]);
-        NSString *key    = [NSString stringWithUTF8String:name];
-        
-        if (key) {
-            id object = [self valueForKey:key];
-            [aCoder encodeObject:object forKey:key];
-        }
-    }
+    [aCoder encodeDouble:self.longitude forKey:@"longitude"];
+    [aCoder encodeDouble:self.latitude forKey:@"latitude"];
+    [aCoder encodeObject:self.country forKey:@"country"];
+    [aCoder encodeObject:self.administrativeArea forKey:@"administrativeArea"];
+    [aCoder encodeObject:self.subAdministrativeArea forKey:@"subAdministrativeArea"];
+    [aCoder encodeObject:self.locality forKey:@"locality"];
+    [aCoder encodeObject:self.subLocality forKey:@"subLocality"];
+    [aCoder encodeObject:self.thoroughfare forKey:@"thoroughfare"];
+    [aCoder encodeObject:self.subThoroughfare forKey:@"subThoroughfare"];
+    [aCoder encodeObject:self.areaCode forKey:@"areaCode"];
+    [aCoder encodeObject:self.cityCode forKey:@"cityCode"];
+    [aCoder encodeObject:self.date forKey:@"date"];
 }
 
 #pragma mark - Getter
